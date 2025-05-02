@@ -1,4 +1,4 @@
-import Head from "next/head";
+// import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +6,7 @@ import Link from "next/link";
 import logo from "../public/assests/Ashinity.png";
 import heroImg from "../public/assests/images/testimage.svg";
 import { MdMenu } from "react-icons/md";
-import { BsThreeDots } from "react-icons/bs";
+// import { BsThreeDots } from "react-icons/bs";
 import chartImg from "../public/assests/icons/chart.svg";
 import fileImg from "../public/assests/icons/file.svg";
 import dataImg from "../public/assests/icons/data.svg";
@@ -30,6 +30,19 @@ import TextInput from "@/Components/TextInput";
 import TextArea from "@/Components/TextArea";
 import ServicesCard from "@/Components/ServicesCard/ServicesCard";
 import CustomUnderline from "@/Components/CustomUnderline/CustomUnderline";
+
+export const metadata = {
+  title: "Ashinity Synergy",
+  description:
+    "Empowering Your Business with Tech, Policy, and Growth Expertise",
+  head: [
+    {
+      tag: "link",
+      rel: "stylesheet",
+      href: "https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap",
+    },
+  ],
+};
 
 const navdata = [
   {
@@ -112,12 +125,12 @@ const sponsored = [spinlotoImg, aurallyImg, spendaImg, aktivImg, quickcareImg];
 export default function Home() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <link
           href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap"
           rel="stylesheet"
         />
-      </Head>
+      </Head> */}
 
       <div>
         <header>
