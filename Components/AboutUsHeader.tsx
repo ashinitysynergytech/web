@@ -5,13 +5,13 @@ import CustomUnderline from "./CustomUnderline";
 
 function AboutUsHeader() {
   return (
-    <div className="mx-auto flex flex-row space-x-4 items-center justify-between">
+    <div className="max-w-7xl mx-auto flex flex-row space-x-4 items-center justify-between">
       <div className="w-full lg:w-1/2">
         <h2 className="text-5xl lg:text-[64px] text-primary font-black uppercase leading-normal">
           About Us
         </h2>
         <CustomUnderline className="w-[85%]" />
-        <p>
+        <p className="font-medium">
           <span className="text-primary">Ashinity</span> is a diversified
           conglomerate driving innovation and socio-economic impact through
           technology, allied services, real estate, and leadership development.
