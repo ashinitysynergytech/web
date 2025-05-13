@@ -1,9 +1,9 @@
 import React from "react";
-import icon from "../../public/assests/icons/Group.svg";
-import helloImg from "../../public/assests/images/say-hello-ashinity.png";
+import icon from "../../public/assets/icons/Group.svg";
+import helloImg from "../../public/assets/images/say-hello-ashinity.png";
 import "./card.css";
 import Image from "next/image";
-import { ServicesData } from "../data/services";
+import { ServicesData } from "../../lib/data/services";
 import { IoIosArrowForward } from "react-icons/io";
 
 const ServicesCard = () => {
