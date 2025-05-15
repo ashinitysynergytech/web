@@ -4,7 +4,6 @@ import { MdMenu } from "react-icons/md";
 import Image from "next/image";
 import logo from "@/public/assets/Ashinity.png";
 
-
 const navdata = [
   {
     name: "Home",
@@ -24,7 +23,7 @@ const navdata = [
   },
   {
     name: "News & Events",
-    href: "#",
+    href: "/news-and-events",
   },
   {
     name: "Contact Us",
