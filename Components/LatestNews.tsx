@@ -27,20 +27,22 @@ const latestNewsData: LatestNewsItem[] = [
 
 function LatestNews() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col space-y-4 items-start justify-center">
-      <div className="flex flex-row justify-between items-center w-full">
-        <div className="flex flex-col space-y-3">
-          <h3 className="text-[42px] font-semibold text-[var(--color-primary)]">
-            Latest Updates
-          </h3>
-          <CustomUnderline className="w-[417px]" />
+    // <div className="flex bg-gray-100 py-12">
+      <div className="max-w-7xl mx-auto flex flex-col space-y-4 items-start justify-center">
+        <div className="flex flex-row justify-between items-center w-full">
+          <div className="flex flex-col space-y-3">
+            <h3 className="text-[42px] font-semibold text-[var(--color-primary)]">
+              Latest Updates
+            </h3>
+            <CustomUnderline className="w-[417px]" />
+          </div>
+          <h4 className="uppercase text-lg text-gray-800 font-medium">
+            Featured Events
+          </h4>
         </div>
-        <h4 className="uppercase text-lg text-gray-800 font-medium">
-          Featured Events
-        </h4>
+        <LatestNewsGrid latestNewsItems={latestNewsData} />
       </div>
-      <LatestNewsGrid latestNewsItems={latestNewsData} />
-    </div>
+    // </div>
   );
 }
 
