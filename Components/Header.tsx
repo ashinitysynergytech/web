@@ -22,6 +22,10 @@ const navdata = [
     href: "#",
   },
   {
+    name: "Programs",
+    href: "/programs",
+  },
+  {
     name: "News & Events",
     href: "/news-and-events",
   },
