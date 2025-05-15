@@ -12,13 +12,12 @@ import useCustomCarousel from "embla-carousel-react";
 import "./styles.css";
 
 type PropType = {
-  slides: number[];
   options?: EmblaOptionsType;
   children: React.ReactNode;
 };
 
 const CustomCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+  const { options } = props;
   const [emblaRef, emblaApi] = useCustomCarousel(options);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -34,13 +33,7 @@ const CustomCarousel: React.FC<PropType> = (props) => {
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
-            </div>
-          ))}
-        </div>
+        <div className="embla__container">{props.children}</div>
       </div>
 
       <div className="embla__controls">
