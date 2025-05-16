@@ -19,7 +19,7 @@ const navdata = [
   },
   {
     name: "Partnerships",
-    href: "#",
+    href: "/partnerships",
   },
   {
     name: "Programs",
