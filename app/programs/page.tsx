@@ -1,4 +1,6 @@
 import AboutNexus from "@/components/AboutNexus";
+import ContactUs from "@/components/ContactUs";
+import NexusBenefits from "@/components/NexusBenefits";
 import ProgramsHeader from "@/components/ProgramsHeader";
 import ProgramsSlides from "@/components/ProgramsSlides";
 import React from "react";
@@ -11,6 +13,8 @@ function ProgramsPage() {
         <AboutNexus />
       </div>
       <ProgramsSlides />
+      <NexusBenefits />
+      <ContactUs />
     </div>
   );
 }
