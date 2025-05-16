@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function PartnershipInfoStat() {
   return (
-    <div className="flex flex-col space-y-8 items-center justify-between bg-[#0A2725] w-[26rem] h-[35rem] pt-8">
+    <div className="flex flex-col space-y-8 items-center justify-between bg-[#0A2725] w-full md:w-[26rem] h-[35rem] pt-8">
       <div className="flex flex-col space-y-4 items-center w-3/4">
         <div className="flex flex-row space-x-3 items-center justify-center">
           <Image src={Globe} alt="Globe" width={100} height={100} />

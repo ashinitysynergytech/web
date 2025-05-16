@@ -5,8 +5,8 @@ import CustomUnderline from "./CustomUnderline";
 
 function PartnershipsHeader() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-row space-x-4 items-center justify-between py-20">
-      <div className="w-full lg:w-1/2 space-y-4">
+    <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row space-x-4 items-center justify-between py-10 md:py-20 px-4 md:px-0">
+      <div className="w-full md:w-1/2 space-y-4">
         <h2 className="text-5xl lg:text-[50px] text-primary font-black uppercase leading-normal">
           Innovate Together. Transform Africa.
         </h2>
@@ -19,7 +19,7 @@ function PartnershipsHeader() {
           Explore Partnerships Opportunities
         </button>
       </div>
-      <div className="w-full flex items-center justify-center lg:w-1/2">
+      <div className="w-full flex items-center justify-center md:w-1/2">
         <Image
           src={PartnershipsHeaderImg}
           alt="Partnerships Header"
