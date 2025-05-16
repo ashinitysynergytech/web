@@ -1,3 +1,4 @@
+import ContactUsWithForm from "@/components/ContactUsWithForm";
 import PartnershipsHeader from "@/components/PartnershipsHeader";
 import PartnershipsNexus from "@/components/PartnershipsNexus";
 import VisionImpactSlides from "@/components/VisionImpactSlides";
@@ -12,6 +13,7 @@ function PartnershipsPage() {
         <PartnershipsNexus />
       </div>
       <VisionImpactSlides />
+      <ContactUsWithForm />
     </div>
   );
 }
