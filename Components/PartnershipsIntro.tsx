@@ -3,7 +3,7 @@ import CustomUnderline from "./CustomUnderline";
 
 const PartnershipsIntro: React.FC = () => {
   return (
-    <section className="max-w-2xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="max-w-2xl px-4 py-6 md:py-16 sm:px-6 lg:px-8">
       <div className="flex flex-col space-y-5">
         {/* Badge */}
         <div className="w-fit bg-[#008B94] text-white px-3 py-2 font-medium self-start">

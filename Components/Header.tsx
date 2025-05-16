@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 import Image from "next/image";
 import logo from "@/public/assets/Ashinity.png";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const navdata = [
   {
@@ -27,17 +29,22 @@ const navdata = [
     name: "News & Events",
     href: "/news-and-events",
   },
-  {
-    name: "Contact Us",
-    href: "#",
-  },
+  // {
+  //   name: "Contact Us",
+  //   href: "#",
+  // },
 ];
 
 function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const isActive = (path: string) => {
+    return pathname === path;
   };
 
   return (
@@ -55,7 +62,10 @@ function Header() {
                   <Link
                     key={index + 1}
                     href={item.href}
-                    className="px-3 text-[var(--color-primary)] text-sm font-medium tracking-wider"
+                    className={cn(
+                      "px-3 text-[var(--color-primary)] text-sm font-medium tracking-wider",
+                      isActive(item.href) && "text-[#B46E0F]"
+                    )}
                   >
                     {item.name}
                   </Link>
@@ -89,7 +99,10 @@ function Header() {
               <li key={index} className="py-2">
                 <Link
                   href={item.href}
-                  className="text-[var(--color-primary)] text-sm font-medium tracking-wider block"
+                  className={cn(
+                    "text-[var(--color-primary)] text-sm font-medium tracking-wider block",
+                    isActive(item.href) && "text-[#B46E0F]"
+                  )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

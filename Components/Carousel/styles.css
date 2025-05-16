@@ -6,7 +6,7 @@
   --slide-size: 65%;
   
   @media (max-width: 480px) {
-    max-width: 35%;
+    max-width: 100%;
     --slide-height: 19rem;
     --slide-size: 115%;
   }

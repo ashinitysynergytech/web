@@ -11,7 +11,7 @@ import TextArea from "@/components/TextArea";
 function ContactUs() {
   return (
     <section className="py-24">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
+      <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-12 xl:px-0">
         <div className="relative bg-[var(--color-secondary)] flex p-8">
           <div className="hidden lg:block absolute top-1/2 transform -translate-y-1/2">
             <Image

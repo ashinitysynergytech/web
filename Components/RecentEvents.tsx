@@ -62,7 +62,7 @@ const recentNewsData: NewsItem[] = [
 
 function RecentEvents() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col space-y-4 items-start justify-center">
+    <div className="max-w-7xl mx-auto flex flex-col space-y-4 items-start justify-center px-4 md:px-0">
       <h3 className="text-[42px] font-semibold text-[var(--color-primary)]">
         Recent Events
       </h3>

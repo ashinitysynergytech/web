@@ -9,7 +9,7 @@ function ProgramsHeader() {
     <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row space-x-4 items-center justify-between space-y-6 md:space-y-0 py-10 md:py-20 px-8 md:px-0">
       <div className="w-full lg:w-1/2 space-y-4">
         <Image src={NexusLogo} alt="Nexus Logo" width={150} height={100} />
-        <h2 className="text-5xl lg:text-[50px] text-primary font-black uppercase leading-normal">
+        <h2 className="text-4xl md:text-5xl lg:text-[50px] text-primary font-black uppercase leading-normal">
           Join The Future of Tech Conversations.
         </h2>
         <CustomUnderline className="w-[85%]" />

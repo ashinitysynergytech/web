@@ -43,7 +43,7 @@ const slideData: VisionImpactSlideItem[] = [
 
 function VisionImpactSlides() {
   return (
-    <div className="max-w-7xl mx-auto space-y-4 items-start justify-between px-4 md:px-0">
+    <div className="max-w-7xl mx-auto space-y-4 items-start justify-between px-4 md:px-0 w-[25rem] md:w-full">
       <h3 className="text-[35px] font-bold text-[var(--color-primary)]">
         From Vision To Impact
       </h3>
