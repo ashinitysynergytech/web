@@ -3,7 +3,16 @@
   /* margin: auto; */
   --slide-height: 22rem;
   --slide-spacing: 1rem;
-  --slide-size: 50%;
+  --slide-size: 65%;
+  
+  @media (max-width: 480px) {
+    max-width: 35%;
+    --slide-height: 19rem;
+    --slide-size: 115%;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    --slide-size: 65%;
+  }
 }
 .embla__viewport {
   overflow: hidden;
@@ -53,7 +62,7 @@
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
-  border-color: #B46E0F;
+  border-color: #b46e0f;
   border-width: 2px;
   touch-action: manipulation;
   display: inline-flex;
@@ -78,7 +87,7 @@
 .embla__button__svg {
   width: 35%;
   height: 35%;
-  color: #B46E0F;
+  color: #b46e0f;
 }
 .embla__dots {
   display: flex;

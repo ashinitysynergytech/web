@@ -120,7 +120,7 @@ const ServicesCard = () => {
         </div>
       </div>
 
-      <div className="box-4 relative bg-[var(--color-secondary)] text-[var(--text-white)] p-6 overflow-hidden">
+      <div className="h-[35rem] md:h-auto box-4 relative bg-[var(--color-secondary)] text-[var(--text-white)] p-6 overflow-hidden">
         <div className="mb-6">
           <span className="text-xl font-semibold">
             We are ready for new challenges – together we can create something
@@ -131,7 +131,7 @@ const ServicesCard = () => {
           <span>hello@ashinity.com</span>
           <span>+234 533 097 111</span>
         </div>
-        <div className="w-96 h-auto absolute -bottom-60 md:-bottom-36 lg:bottom-0 left-32 md:left-48 lg:left-1/2 lg:transform lg:-translate-x-1/2 ">
+        <div className="w-96 h-auto absolute md:-bottom-36 lg:bottom-0 md:left-48 lg:left-1/2 lg:transform lg:-translate-x-1/2 ">
           <Image src={helloImg} alt="Contact us" className="w-full h-full" />
         </div>
       </div>

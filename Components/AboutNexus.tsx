@@ -5,11 +5,17 @@ import NexusIntro from "./NexusIntro";
 
 function AboutNexus() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-row space-x-4 items-center justify-between">
-      <div className="w-2/5">
-        <Image src={AboutNexusImg} alt="About Nexus" width={500} height={500} />
+    <div className="md:max-w-7xl mx-auto flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center justify-between">
+      <div className="w-full md:w-2/5">
+        <Image
+          src={AboutNexusImg}
+          alt="About Nexus"
+          width={400}
+          height={400}
+          className="w-full h-full object-cover"
+        />
       </div>
-      <div className="w-3/5">
+      <div className="w-full md:w-3/5">
         <NexusIntro />
       </div>
     </div>

@@ -15,7 +15,7 @@ type Props = {
 function ProgramSlide({ item, className }: Props) {
   return (
     <div
-      className={cn("relative w-[28rem] h-[20rem]", className)}
+      className={cn("relative w-[28rem] h-[16rem] md:h-[20rem]", className)}
       style={{
         backgroundImage: `url(${item.image})`,
         backgroundSize: "cover",

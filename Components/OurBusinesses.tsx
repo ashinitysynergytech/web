@@ -44,7 +44,7 @@ const businessCards = [
 
 function OurBusinesses() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col space-y-4 items-start justify-center">
+    <div className="max-w-7xl mx-auto flex flex-col space-y-4 items-start justify-center md:px-0 px-6">
       <h3 className="text-[42px] font-bold text-[var(--color-primary)]">
         Our Businesses
       </h3>
@@ -52,11 +52,11 @@ function OurBusinesses() {
       <p className="font-medium">
         Each subsidiary contributes uniquely to our mission:
       </p>
-      <div className="flex flex-row space-x-4 items-center justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 cursor-pointer px-2 md:px-0">
         {businessCards.map((card) => (
           <Card
             key={card.id}
-            className="w-80 h-96 rounded-none overflow-hidden border-none"
+            className="w-[26rem] h-[30rem] md:w-80 md:h-96 rounded-none overflow-hidden border-none"
           >
             <CardContent className="p-0 h-full relative">
               <div

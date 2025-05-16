@@ -30,8 +30,8 @@ const benefits = [
 
 function NexusBenefits() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-row space-x-4 items-start justify-between py-10">
-      <div className="w-1/3 flex flex-col items-start justify-between h-72">
+    <div className="max-w-7xl mx-auto flex flex-col md:flex-row space-x-4 items-start justify-between py-5 px-4 md:px-0 md:py-10">
+      <div className="w-full md:w-1/3 flex flex-col items-start justify-between md:h-72 h-auto mb-4 md:mb-0">
         <div>
           <h3 className="text-[35px] font-semibold text-[var(--color-primary)]">
             Why Be Part of Nexus?
@@ -47,7 +47,7 @@ function NexusBenefits() {
           </button>
         </div>
       </div>
-      <div className="w-2/3 grid grid-cols-2 gap-4">
+      <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
         {benefits.map((benefit) => (
           <NexusBenefit
             key={benefit.title}

@@ -6,7 +6,7 @@ import CustomUnderline from "./CustomUnderline";
 
 function ProgramsHeader() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-row space-x-4 items-center justify-between py-20">
+    <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row space-x-4 items-center justify-between space-y-6 md:space-y-0 py-10 md:py-20 px-8 md:px-0">
       <div className="w-full lg:w-1/2 space-y-4">
         <Image src={NexusLogo} alt="Nexus Logo" width={150} height={100} />
         <h2 className="text-5xl lg:text-[50px] text-primary font-black uppercase leading-normal">
@@ -20,7 +20,7 @@ function ProgramsHeader() {
           collaborative sessions on AI, quantum computing, Web3, and more.
         </p>
         <button className="bg-[#B46E0F] text-white p-4 rounded-full">
-        Join the Next X Space
+          Join the Next X Space
         </button>
       </div>
       <div className="w-full flex items-center justify-center lg:w-1/2">

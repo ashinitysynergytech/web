@@ -39,7 +39,7 @@ const slideData: ProgramSlideItem[] = [
 
 function ProgramsSlides() {
   return (
-    <div className="max-w-7xl mx-auto space-y-4 items-start justify-between">
+    <div className="max-w-7xl mx-auto space-y-4 items-start justify-between md:px-0 px-8">
       <h3 className="text-[35px] font-bold text-[var(--color-primary)]">
         Fueling Innovation, <br /> One Week at a Time
       </h3>

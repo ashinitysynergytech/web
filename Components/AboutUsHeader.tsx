@@ -5,7 +5,7 @@ import CustomUnderline from "./CustomUnderline";
 
 function AboutUsHeader() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-row space-x-4 items-center justify-between">
+    <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center justify-between md:px-0 px-6">
       <div className="w-full lg:w-1/2">
         <h2 className="text-5xl lg:text-[64px] text-primary font-black uppercase leading-normal">
           About Us

@@ -45,9 +45,9 @@ export default function Home() {
         <main>
           <section className="py-24">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-              <div className="flex items-center justify-between gap-6">
+              <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6">
                 <div className="w-full md:w-1/2">
-                  <div className="max-w-md flex flex-col space-y-5">
+                  <div className="max-w-md flex flex-col text-center md:text-left items-center justify-center space-y-5">
                     <h2 className="text-5xl lg:text-[64px] text-[var(--color-primary)] font-black uppercase leading-normal">
                       Innovate, Advocate, Scale...
                     </h2>
@@ -65,8 +65,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="w-1/2 hidden md:block">
-                  <Image src={heroImg} alt="Ahsinity" />
+                <div className="w-full md:w-1/2 flex items-center justify-center">
+                  <Image
+                    src={heroImg}
+                    width={500}
+                    height={500}
+                    alt="Ahsinity"
+                  />
                 </div>
               </div>
             </div>

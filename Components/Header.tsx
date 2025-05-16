@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
-import { MdMenu } from "react-icons/md";
+import React, { useState } from "react";
+import { MdMenu, MdClose } from "react-icons/md";
 import Image from "next/image";
 import logo from "@/public/assets/Ashinity.png";
 
@@ -12,10 +14,6 @@ const navdata = [
   {
     name: "About Us",
     href: "/about-us",
-  },
-  {
-    name: "Our Businesses",
-    href: "#",
   },
   {
     name: "Partnerships",
@@ -36,6 +34,12 @@ const navdata = [
 ];
 
 function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <header>
       <nav className="py-10 border-b border-b-[var(--color-primary)]/10 shadow-xs">
@@ -59,7 +63,40 @@ function Header() {
               })}
             </li>
           </ul>
-          <MdMenu size={32} className="lg:hidden" />
+          <button
+            className="lg:hidden bg-[#B46E0F] rounded-full p-2"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <MdClose size={32} className="text-white" />
+            ) : (
+              <MdMenu size={32} className="text-white" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`lg:hidden absolute top-[92px] left-0 right-0 bg-white z-50 border-b border-b-[var(--color-primary)]/10 shadow-md transition-all duration-300 ease-in-out ${
+            mobileMenuOpen
+              ? "max-h-[500px] opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
+        >
+          <ul className="flex flex-col py-4 px-6">
+            {navdata.map((item, index) => (
+              <li key={index} className="py-2">
+                <Link
+                  href={item.href}
+                  className="text-[var(--color-primary)] text-sm font-medium tracking-wider block"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
     </header>
