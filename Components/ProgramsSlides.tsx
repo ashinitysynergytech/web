@@ -40,8 +40,8 @@ const slideData: ProgramSlideItem[] = [
 function ProgramsSlides() {
   return (
     <div className="max-w-7xl mx-auto space-y-4 items-start justify-between">
-      <h3 className="text-[42px] font-bold text-[var(--color-primary)]">
-        Trusted by Innovators
+      <h3 className="text-[35px] font-bold text-[var(--color-primary)]">
+        Fueling Innovation, <br /> One Week at a Time
       </h3>
       <CustomUnderline className="max-w-[417px]" />
       <CustomCarousel options={OPTIONS}>
