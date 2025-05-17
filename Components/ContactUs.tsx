@@ -5,8 +5,8 @@ import contactImg from "../public/assets/images/contact-us-ashinity.png";
 
 //components
 
-import TextInput from "@/components/TextInput";
-import TextArea from "@/components/TextArea";
+import TextInput from "@/Components/TextInput";
+import TextArea from "@/Components/TextArea";
 
 function ContactUs() {
   return (

@@ -15,7 +15,7 @@ const recentNewsData: NewsItem[] = [
     description:
       "Ashinify joined UN/UNDP leaders in Abuja to champion youth tech innovation through AI, Web3 & partnerships for Africa's growth.",
     image: UNDPEventImage,
-    date: "12th of May, 2025",
+    date: "10th of April, 2025",
     link: "#",
   },
   {
@@ -23,7 +23,7 @@ const recentNewsData: NewsItem[] = [
     description:
       "As guest speakers, Ashinity highlighted the burgeoning landscape of 'Blockchain Careers and Opportunities,' emphasizing the increasing need for skilled professionals across sectors.",
     image: BlockchainEventImage,
-    date: "12th of May, 2025",
+    date: "12th of August, 2024",
     link: "#",
   },
   {
@@ -39,7 +39,7 @@ const recentNewsData: NewsItem[] = [
     description:
       "Ashinity proudly facilitated the collaboration between the Plateau State Government and Algorand Foundation to explore blockchain programs in Nigeria, aiming to pilot use cases and train local developers.",
     image: AlgorandPlateauImage,
-    date: "12th of May, 2025",
+    date: "12th of December, 2024",
     link: "#",
   },
   {
@@ -47,16 +47,16 @@ const recentNewsData: NewsItem[] = [
     description:
       "Ashinity contributed to a 2023 Algorand bootcamp by leading teams in area of blockchain, to build capacity and to create innovative solutions.",
     image: AlgorandBootcampImage,
-    date: "12th of May, 2025",
-    link: "#",
+    date: "30th of September, 2024",
+    link: "https://x.com/ashinitysynergy/status/1708087162976006459?s=46&t=ZT44lJ0Zf959WVtNyuxeBg",
   },
   {
     title: "Blockchain and Creatives",
     description:
       "Ashinity hosted a 'Blockchain and Creatives' event featuring M.I Abaga, fostering discussions and connections between the tech and creative industries.",
     image: AlgorandSpacesImage,
-    date: "12th of May, 2025",
-    link: "#",
+    date: "28th of August, 2023",
+    link: "https://x.com/algorand_ng/status/1697292953994068241?s=46",
   },
 ];
 

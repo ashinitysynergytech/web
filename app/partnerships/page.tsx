@@ -1,7 +1,7 @@
-import ContactUsWithForm from "@/components/ContactUsWithForm";
-import PartnershipsHeader from "@/components/PartnershipsHeader";
-import PartnershipsNexus from "@/components/PartnershipsNexus";
-import VisionImpactSlides from "@/components/VisionImpactSlides";
+import ContactUsWithForm from "@/Components/ContactUsWithForm";
+import PartnershipsHeader from "@/Components/PartnershipsHeader";
+import PartnershipsNexus from "@/Components/PartnershipsNexus";
+import VisionImpactSlides from "@/Components/VisionImpactSlides";
 
 import React from "react";
 

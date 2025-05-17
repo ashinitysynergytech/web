@@ -19,9 +19,11 @@ function ProgramsHeader() {
           tomorrow’s solutions. Engage in live debates, deep dives, and
           collaborative sessions on AI, quantum computing, Web3, and more.
         </p>
+        <a href="https://x.com/nexusbyashinity?s=21&t=ZT44lJ0Zf959WVtNyuxeBg">
         <button className="bg-[#B46E0F] text-white p-4 rounded-full">
           Join the Next X Space
         </button>
+        </a>
       </div>
       <div className="w-full flex items-center justify-center lg:w-1/2">
         <Image

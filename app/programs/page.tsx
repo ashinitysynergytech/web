@@ -1,8 +1,8 @@
-import AboutNexus from "@/components/AboutNexus";
-import ContactUs from "@/components/ContactUs";
-import NexusBenefits from "@/components/NexusBenefits";
-import ProgramsHeader from "@/components/ProgramsHeader";
-import ProgramsSlides from "@/components/ProgramsSlides";
+import AboutNexus from "@/Components/AboutNexus";
+import ContactUs from "@/Components/ContactUs";
+import NexusBenefits from "@/Components/NexusBenefits";
+import ProgramsHeader from "@/Components/ProgramsHeader";
+import ProgramsSlides from "@/Components/ProgramsSlides";
 import React from "react";
 
 function ProgramsPage() {

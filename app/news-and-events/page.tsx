@@ -1,6 +1,6 @@
-import LatestNews from "@/components/LatestNews";
-import NewsEventsHeader from "@/components/NewsEventsHeader";
-import RecentEvents from "@/components/RecentEvents";
+import LatestNews from "@/Components/LatestNews";
+import NewsEventsHeader from "@/Components/NewsEventsHeader";
+import RecentEvents from "@/Components/RecentEvents";
 import React from "react";
 
 function NewsEventsPage() {

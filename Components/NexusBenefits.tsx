@@ -42,9 +42,11 @@ function NexusBenefits() {
           <p className="font-medium">
             Ready to excel? Connect with us on X spaces!
           </p>
+          <a href="https://x.com/nexusbyashinity?s=21&t=ZT44lJ0Zf959WVtNyuxeBg">
           <button className="bg-[#B46E0F] text-white p-4 rounded-full">
             Let&apos;s connect
           </button>
+          </a>
         </div>
       </div>
       <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">

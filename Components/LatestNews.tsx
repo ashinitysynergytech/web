@@ -9,10 +9,10 @@ const latestNewsData: LatestNewsItem[] = [
   {
     title: "Spenda App Launch",
     description:
-      "Ashinity proudly launched Spenda on May 1, 2024—a groundbreaking crypto app designed to bridge the gap between digital assets and everyday financial needs. Built entirely in-house by Ashinity’s R&D team, Spenda empowers users to instantly convert crypto to fiat, pay bills, send money, and make card payments seamlessly across Africa.",
+      "Ashinity proudly present at Spenda launch on May 1, 2024—a groundbreaking crypto app designed to bridge the gap between digital assets and everyday financial needs. Built entirely in-house by Ashinity’s R&D team, Spenda empowers users to instantly convert crypto to fiat, pay bills, send money, and make card payments seamlessly across Africa.",
     image: SpendaLaunchImage,
-    date: "12th of May, 2025",
-    link: "#",
+    date: "1st of May, 2025",
+    link: "https://spenda.africa",
   },
   {
     title: "FEATURED ON TRUST TV",
@@ -21,7 +21,7 @@ const latestNewsData: LatestNewsItem[] = [
       "Emerging technologies like AI, blockchain and IoT, Quantum Technology are poised to transform Africa’s key sectors—from precision agriculture and fintech to health and smart cities—if governments, investors and industry collaborate on universal power and connectivity, smart regulation and skills development. With over 60 % of the population under 25, a coordinated push on digital literacy, blended finance and inclusive design could turn today’s infrastructure gaps into tomorrow’s growth engines.",
     image: MeshachTrustTvImage,
     date: "12th of May, 2025",
-    link: "#",
+    link: "https://youtu.be/30E78ArmBDQ",
   },
 ];
 
