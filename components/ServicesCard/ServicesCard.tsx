@@ -25,7 +25,10 @@ const ServicesCard = () => {
 
         <div className="space-y-6">
           {ServicesData.policy.map((service) => (
-            <div key={service.id} className="flex items-start gap-3">
+            <div
+              key={service.id}
+              className="flex flex-col md:flex-row space-y-4 md:space-y-0 items-start gap-3"
+            >
               <div className="flex items-center gap-2 min-w-[180px]">
                 <span className="text-base text-[var(--color-primary)] font-normal">
                   {service.title}
@@ -62,7 +65,10 @@ const ServicesCard = () => {
 
         <div className="space-y-6">
           {ServicesData.research.map((service) => (
-            <div key={service.id} className="flex items-start gap-3">
+            <div
+              key={service.id}
+              className="flex flex-col md:flex-row space-y-4 md:space-y-0 items-start gap-3"
+            >
               <div className="flex items-center gap-2 min-w-[180px]">
                 <span className="text-base text-[var(--color-primary)] font-normal">
                   {service.title}
@@ -99,7 +105,10 @@ const ServicesCard = () => {
 
         <div className="space-y-6">
           {ServicesData.enterprise.map((service) => (
-            <div key={service.id} className="flex items-start gap-8">
+            <div
+              key={service.id}
+              className="flex flex-col md:flex-row space-y-4 md:space-y-0 items-start gap-8"
+            >
               <div className="flex items-center gap-2 min-w-[220px]">
                 <span className="text-base text-[var(--color-primary)] font-normal">
                   {service.title}
