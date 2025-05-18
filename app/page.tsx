@@ -11,11 +11,11 @@ import dataImg from "../public/assets/icons/data.svg";
 import partnerImg from "../public/assets/images/ashinity-partner-image.png";
 
 //components
-import ServicesCard from "@/Components/ServicesCard/ServicesCard";
-import CustomUnderline from "@/Components/CustomUnderline";
-import ContactUs from "@/Components/ContactUs";
-import RecentProjects from "@/Components/RecentProjects";
-import TrustedByInnovators from "@/Components/TrustedByInnovators";
+import ServicesCard from "@/components/ServicesCard/ServicesCard";
+import CustomUnderline from "@/components/CustomUnderline";
+import ContactUs from "@/components/ContactUs";
+import RecentProjects from "@/components/RecentProjects";
+import TrustedByInnovators from "@/components/TrustedByInnovators";
 
 const patnerData = [
   {

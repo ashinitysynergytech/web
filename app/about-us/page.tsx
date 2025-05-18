@@ -1,10 +1,10 @@
 import React from "react";
-import AboutUsHeader from "@/Components/AboutUsHeader";
-import VisionSection from "@/Components/VisionSection";
-import TrustedByInnovators from "@/Components/TrustedByInnovators";
-import RecentProjects from "@/Components/RecentProjects";
-import ContactUs from "@/Components/ContactUs";
-import OurBusinesses from "@/Components/OurBusinesses";
+import AboutUsHeader from "@/components/AboutUsHeader";
+import VisionSection from "@/components/VisionSection";
+import TrustedByInnovators from "@/components/TrustedByInnovators";
+import RecentProjects from "@/components/RecentProjects";
+import ContactUs from "@/components/ContactUs";
+import OurBusinesses from "@/components/OurBusinesses";
 
 function AboutUsPage() {
   return (
