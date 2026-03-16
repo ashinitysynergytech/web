@@ -29,11 +29,15 @@ function ContactUs() {
           <div className="hidden lg:block w-[40%]" />
           <div className="w-full lg:w-[60%]">
             <h3 className="text-[42px] font-bold text-[var(--color-primary)]">
-              Let’s talk
+              Discuss your innovation mandate
             </h3>
             <p className="flex flex-col text-[var(--text-white)] mb-6">
-              <span>Are you in need of an experienced tech team?</span>
-              <span>Let&apos;s have a conversation.</span>
+              <span>
+                Planning a programme, platform, or systems intervention?
+              </span>
+              <span>
+                Share the brief and Ashinity can scope the right starting point.
+              </span>
             </p>
             <div>
               <form
@@ -41,33 +45,33 @@ function ContactUs() {
                 className="text-sm text-[var(--text-white)] lg:w-96 space-y-2"
               >
                 <div className="w-full flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-0">
-                  Hey, my name is
+                  My name is
                   <TextInput
                     placeholder="your name"
                     className="w-full sm:w-lg lg:w-28 lg:mx-2"
                   />
-                  and i am looking for
+                  and I need help with
                 </div>
                 <div>
                   <TextArea
-                    placeholder="your message"
+                    placeholder="your programme, policy, or delivery brief"
                     className="w-full sm:w-lg lg:w-96 h-42 lg:h-fit"
                   />
                 </div>
                 <div className="w-full flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-0">
-                  here&apos;s my email
+                  My email is
                   <TextInput
                     placeholder="your email"
                     className="w-full sm:w-lg lg:w-28 lg:mx-2"
                   />
-                  and my phone no
+                  and my phone number is
                 </div>
                 <TextInput
                   placeholder="your phone"
                   className="w-full sm:w-lg lg:w-28"
                 />
                 <button className="px-4 py-2 bg-[var(--btn-color)] text-white rounded-full mt-6 lg:mt-0">
-                  Submit
+                  Request a scoping call
                 </button>
               </form>
             </div>

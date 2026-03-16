@@ -1,149 +1,274 @@
-// import Head from "next/head";
 import Image from "next/image";
-
-//images & icons
+import Link from "next/link";
 
 import heroImg from "../public/assets/images/testimage.svg";
-// import { BsThreeDots } from "react-icons/bs";
 import chartImg from "../public/assets/icons/chart.svg";
 import fileImg from "../public/assets/icons/file.svg";
 import dataImg from "../public/assets/icons/data.svg";
 import partnerImg from "../public/assets/images/ashinity-partner-image.png";
 
-//components
-import ServicesCard from "@/components/ServicesCard/ServicesCard";
-import CustomUnderline from "@/components/CustomUnderline";
 import ContactUs from "@/components/ContactUs";
 import RecentProjects from "@/components/RecentProjects";
-import TrustedByInnovators from "@/components/TrustedByInnovators";
 
-const patnerData = [
+const capabilities = [
   {
     icon: chartImg,
-    title: "Shape Your Industry with Science Policy Expertise",
+    title: "Innovation advisory",
     description:
-      "Science Policy Research and Advocacy: Expert insights and tech analysis for policy influence.",
+      "Strategy, policy insight, and programme design for institutions and regulated organizations.",
+    points: ["Policy research", "Programme design", "Stakeholder alignment"],
   },
   {
     icon: fileImg,
-    title: "Drive Progress with Cutting-Edge R&D",
+    title: "Product and systems delivery",
     description:
-      "Research and Development in Tech and Science: Cutting-edge tech and science innovations.",
+      "Scoped digital initiatives that move from plan to operational reality.",
+    points: ["Solution design", "Workflow digitization", "Delivery oversight"],
   },
   {
     icon: dataImg,
-    title: "Grow Smarter with Strategic Scaling Solutions",
+    title: "Applied emerging tech",
     description:
-      "Enterprise Scaling Consultation: Strategic tech solutions for business growth.",
+      "AI and frontier technology used where they improve the brief, not as marketing decoration.",
+    points: ["Technology selection", "Pilot planning", "Measured deployment"],
+  },
+];
+
+const clientFit = [
+  "Governments and public institutions shaping innovation priorities",
+  "Ecosystem builders, accelerators, and foundations running programmes",
+  "Regulated organizations balancing transformation with operational rigor",
+];
+
+const operatingModel = [
+  {
+    step: "01",
+    title: "Clarify the mandate",
+    description: "Define the decision, system, or programme that needs to move.",
+  },
+  {
+    step: "02",
+    title: "Build the right scope",
+    description: "Structure a focused advisory or delivery workstream.",
+  },
+  {
+    step: "03",
+    title: "Deliver usable outcomes",
+    description: "Leave the client with assets, systems, and next actions that stick.",
   },
 ];
 
 export default function Home() {
   return (
-    <>
-      <div>
-        <main>
-          <section className="py-24">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-              <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6">
-                <div className="w-full md:w-1/2">
-                  <div className="max-w-md flex flex-col text-center md:text-left items-center justify-center space-y-5">
-                    <h2 className="text-5xl lg:text-[64px] text-[var(--color-primary)] font-black uppercase leading-normal">
-                      Innovate, Advocate, Scale...
-                    </h2>
-                    <p className="text-base font-normal">
-                      Ashinity empowers your business with tech, policy, and
-                      growth expertise.
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <button className="px-3 py-2 rounded-full bg-[var(--btn-color)] hover:bg- text-white tracking-wide">
-                        Book free consultation
-                      </button>
-                      <button className="px-3 py-2 rounded-full border border-[var(--btn-color)] text-[var(--btn-color)] tracking-wide">
-                        Explore our services
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 flex items-center justify-center">
+    <main className="bg-[#f7faf9]">
+      <section className="border-b border-[var(--color-primary)]/10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-20 sm:px-8 md:px-10 lg:px-12 lg:py-28 xl:px-0">
+          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl font-black uppercase leading-[1.02] text-[var(--color-primary)] lg:text-[72px]">
+                Where strategy becomes operating reality.
+              </h1>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-700">
+                Ashinity helps institutions and growth-stage ventures turn
+                innovation strategy into deployable systems and measurable
+                outcomes.
+              </p>
+              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="#contact"
+                  className="rounded-full bg-[var(--btn-color)] px-6 py-3 text-sm font-semibold tracking-wide text-white transition hover:opacity-90"
+                >
+                  Request a scoping call
+                </Link>
+                <Link
+                  href="/about-us"
+                  className="rounded-full border border-[var(--color-primary)]/20 px-6 py-3 text-sm font-semibold tracking-wide text-[var(--color-secondary)] transition hover:border-[var(--btn-color)] hover:text-[var(--btn-color)]"
+                >
+                  View firm overview
+                </Link>
+              </div>
+            </div>
+
+            <div className="rounded-[32px] border border-[var(--color-primary)]/10 bg-[linear-gradient(180deg,rgba(170,249,255,0.22),rgba(255,255,255,1))] p-8 shadow-[0_20px_60px_rgba(21,60,63,0.08)]">
+              <Image
+                src={heroImg}
+                width={560}
+                height={560}
+                priority
+                alt="Ashinity consulting illustration"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
+                What we do
+              </p>
+              <h2 className="mt-3 text-4xl font-semibold text-[var(--color-secondary)] lg:text-[48px]">
+                Focused support for complex mandates.
+              </h2>
+            </div>
+            <p className="max-w-xl text-base leading-7 text-slate-600">
+              The story is simple: advise where clarity is needed, deliver
+              where execution matters.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {capabilities.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-[28px] border border-[var(--color-primary)]/10 bg-white p-7 shadow-[0_8px_30px_rgba(21,60,63,0.06)]"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-primary)]/10">
                   <Image
-                    src={heroImg}
-                    width={500}
-                    height={500}
-                    alt="Ahsinity"
+                    src={item.icon}
+                    alt=""
+                    width={28}
+                    height={28}
+                    className="h-auto w-7"
                   />
                 </div>
-              </div>
+                <h3 className="mt-6 text-2xl font-semibold text-[var(--color-secondary)]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-base leading-7 text-slate-600">
+                  {item.description}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {item.points.map((point) => (
+                    <span
+                      key={point}
+                      className="rounded-full bg-[var(--color-primary)]/8 px-3 py-2 text-sm text-slate-700"
+                    >
+                      {point}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto grid gap-14 px-6 sm:px-8 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-12 xl:px-0">
+          <div className="rounded-[32px] border border-[var(--color-primary)]/10 bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(229,243,244,0.9))] p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
+              Where we are strongest
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold text-[var(--color-secondary)]">
+              Best suited to institutions that need both judgment and execution.
+            </h2>
+            <div className="mt-8 space-y-4">
+              {clientFit.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-[var(--color-primary)]/10 bg-white px-5 py-4 text-base leading-7 text-slate-700"
+                >
+                  {item}
+                </div>
+              ))}
             </div>
-          </section>
-          <section className="py-24 bg-[var(--color-primary)]/10">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-              <h3 className="text-[42px] font-bold text-[var(--color-primary)]">
-                What We Do!
-              </h3>
-              <p className="max-w-md text-base mb-10">
-                From ideation to deployment, we engineer solutions that drive
-                growth, efficiency, and innovation.
+          </div>
+
+          <div className="grid gap-6 lg:grid-rows-[auto_1fr]">
+            <div className="rounded-[32px] bg-slate-950 px-8 py-10 text-white">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--accent-s)]">
+                Positioning
               </p>
-              <CustomUnderline />
-              <div>
-                <ServicesCard />
-              </div>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight">
+                Innovation strategy should end in a decision, a system, or a
+                programme that can run.
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
+                That is the role Ashinity should lead with.
+              </p>
             </div>
-          </section>
-          <section className="py-24">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-              <div className="flex flex-col lg:flex-row items-center gap-24">
-                <div className="w-full lg:w-1/2">
-                  <Image src={partnerImg} alt="" className="w-full h-auto" />
-                </div>
-                <div className="w-full lg:w-1/2">
-                  <h3 className="text-[42px] font-bold text-[var(--color-primary)]">
-                    Why Partner with Ashinity?
-                  </h3>
-                  <CustomUnderline className="w-[85%]" />
-                  <p className="text-base mb-3">
-                    At Ashinity, we empower our partners with innovative
-                    solutions and expert insights through our specialized
-                    services. When you choose to collaborate with us, you gain a
-                    dedicated ally committed to fueling your success. Here’s why
-                    partnering with Ashinity is the smart choice:
-                  </p>
-                  <div>
-                    <ul className="space-y-6">
-                      {patnerData.map((item, index) => {
-                        return (
-                          <li
-                            key={index + 1}
-                            className="flex items-center gap-6"
-                          >
-                            <div className="w-12 h-12 aspect-square p-2 bg-[var(--color-primary)]/10  rounded-full flex items-center justify-center">
-                              <Image
-                                src={item.icon}
-                                alt=""
-                                className="w-6 h-6 aspect-square"
-                              />
-                            </div>
-                            <div>
-                              <h4 className="text-xl font-bold">
-                                {item.title}
-                              </h4>
-                              <p className="text-base">{item.description}</p>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+
+            <div className="overflow-hidden rounded-[32px] border border-[var(--color-primary)]/10 bg-[#eef6f4] p-8">
+              <Image
+                src={partnerImg}
+                alt="Ashinity collaboration illustration"
+                className="h-auto w-full"
+              />
             </div>
-          </section>
-          <TrustedByInnovators />
-          <RecentProjects />
-          <ContactUs />
-        </main>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
+                How we work
+              </p>
+              <h2 className="mt-3 text-4xl font-semibold text-[var(--color-secondary)] lg:text-[48px]">
+                A tighter path from brief to outcome.
+              </h2>
+            </div>
+            <p className="max-w-lg text-base leading-7 text-slate-600">
+              Small firms win when the scope is clear, the team is senior, and
+              the client knows what happens next.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {operatingModel.map((item) => (
+              <article
+                key={item.step}
+                className="rounded-[28px] border border-[var(--color-primary)]/10 bg-white p-7 shadow-[0_8px_30px_rgba(21,60,63,0.05)]"
+              >
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
+                  {item.step}
+                </p>
+                <h3 className="mt-4 text-2xl font-semibold text-[var(--color-secondary)]">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-slate-600">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-[var(--color-primary)]/10 bg-white py-16">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
+                Core line
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold leading-tight text-[var(--color-secondary)] lg:text-4xl">
+                Ashinity helps institutions and growth-stage ventures turn
+                innovation strategy into deployable systems and measurable
+                outcomes.
+              </h2>
+            </div>
+            <Link
+              href="#contact"
+              className="inline-flex rounded-full border border-[var(--color-primary)]/15 px-6 py-3 text-sm font-semibold tracking-wide text-[var(--color-secondary)] transition hover:border-[var(--btn-color)] hover:text-[var(--btn-color)]"
+            >
+              Start a conversation
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <RecentProjects />
+
+      <div id="contact">
+        <ContactUs />
       </div>
-    </>
+    </main>
   );
 }
