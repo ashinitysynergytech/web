@@ -183,9 +183,6 @@ export default function Home() {
                 Innovation strategy should end in a decision, a system, or a
                 programme that can run.
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
-                That is the role Ashinity should lead with.
-              </p>
             </div>
 
             <div className="overflow-hidden rounded-[32px] border border-[var(--color-primary)]/10 bg-[#eef6f4] p-8">
@@ -210,10 +207,6 @@ export default function Home() {
                 A tighter path from brief to outcome.
               </h2>
             </div>
-            <p className="max-w-lg text-base leading-7 text-slate-600">
-              Small firms win when the scope is clear, the team is senior, and
-              the client knows what happens next.
-            </p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
