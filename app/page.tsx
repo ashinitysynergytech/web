@@ -66,7 +66,7 @@ export default function Home() {
           <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-black uppercase leading-[1.02] text-[var(--color-primary)] lg:text-[72px]">
-                Where strategy becomes operating reality.
+                Strategy becomes operating reality.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-700">
                 Ashinity helps institutions and growth-stage ventures turn
