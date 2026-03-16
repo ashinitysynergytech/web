@@ -114,10 +114,6 @@ export default function Home() {
                 Focused support for complex mandates.
               </h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-slate-600">
-              The story is simple: advise where clarity is needed, deliver
-              where execution matters.
-            </p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -245,10 +241,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
-                Core line
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold leading-tight text-[var(--color-secondary)] lg:text-4xl">
+              <h2 className="text-3xl font-semibold leading-tight text-[var(--color-secondary)] lg:text-4xl">
                 Ashinity helps institutions and growth-stage ventures turn
                 innovation strategy into deployable systems and measurable
                 outcomes.
