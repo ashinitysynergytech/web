@@ -1,27 +1,27 @@
-import React from "react";
-import quickcareImg from "../public/assets/images/quickcare.png";
-import spinlotoImg from "../public/assets/images/SpinlottoLogo.png";
-import aurallyImg from "../public/assets/images/aurallyLogo.png";
-import spendaImg from "../public/assets/images/spenda.png";
-import aktivImg from "../public/assets/images/aktiv.png";
 import Image from "next/image";
 
-const sponsored = [spinlotoImg, aurallyImg, spendaImg, aktivImg, quickcareImg];
+import aktivImg from "@/public/assets/images/aktiv.png";
+import aurallyImg from "@/public/assets/images/aurallyLogo.png";
+import quickcareImg from "@/public/assets/images/quickcare.png";
+import spendaImg from "@/public/assets/images/spenda.png";
+import spinlotoImg from "@/public/assets/images/SpinlottoLogo.png";
 
-function RecentProjects() {
+const ventures = [
+  { image: spinlotoImg, name: "Spinlotto" },
+  { image: aurallyImg, name: "Aurally" },
+  { image: spendaImg, name: "Spenda" },
+  { image: aktivImg, name: "Aktiv" },
+  { image: quickcareImg, name: "Quickcare" },
+];
+
+export default function RecentProjects() {
   return (
-    <section className="py-10 border-y border-[var(--color-primary)]/20 mb-24">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-        <div className="flex items-center justify-center flex-wrap gap-8 md:justify-between">
-          {sponsored.map((item, index) => (
-            <div key={index + 1}>
-              <Image src={item} alt="" />
-            </div>
-          ))}
+    <div className="venture-grid" aria-label="Ashinity venture portfolio">
+      {ventures.map((venture) => (
+        <div key={venture.name}>
+          <Image src={venture.image} alt={venture.name} />
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 }
-
-export default RecentProjects;

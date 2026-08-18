@@ -1,119 +1,77 @@
 "use client";
 
-import Link from "next/link";
-import React, { useState } from "react";
-import { MdMenu, MdClose } from "react-icons/md";
 import Image from "next/image";
-import logo from "@/public/assets/Ashinity.png";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
-const navdata = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "About Us",
-    href: "/about-us",
-  },
-  {
-    name: "Partnerships",
-    href: "/partnerships",
-  },
-  {
-    name: "Programs",
-    href: "/programs",
-  },
-  {
-    name: "News & Events",
-    href: "/news-and-events",
-  },
-  // {
-  //   name: "Contact Us",
-  //   href: "#",
-  // },
+import logo from "@/public/assets/Ashinity.png";
+
+const navigation = [
+  { name: "About", href: "/about-us" },
+  { name: "Partnerships", href: "/partnerships" },
+  { name: "Programs", href: "/programs" },
+  { name: "Ideas", href: "/news-and-events" },
 ];
 
-function Header() {
+export default function Header() {
   const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const isActive = (path: string) => {
-    return pathname === path;
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <header>
-      <nav className="py-10 border-b border-b-[var(--color-primary)]/10 shadow-xs">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-          <h1 className="text-3xl font-bold">
-            <Image src={logo} alt="logo" />
-          </h1>
+    <header className="brand-header">
+      <nav className="site-container brand-nav" aria-label="Primary navigation">
+        <Link href="/" className="brand-logo" aria-label="Ashinity home">
+          <Image src={logo} alt="Ashinity" priority />
+        </Link>
 
-          <ul className="hidden lg:flex items-center justify-center">
-            <li>
-              {navdata.map((item, index) => {
-                return (
-                  <Link
-                    key={index + 1}
-                    href={item.href}
-                    className={cn(
-                      "px-3 text-[var(--color-primary)] text-sm font-medium tracking-wider",
-                      isActive(item.href) && "text-[#B46E0F]"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
-            </li>
-          </ul>
-          <button
-            className="lg:hidden bg-[#B46E0F] rounded-full p-2"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <MdClose size={32} className="text-white" />
-            ) : (
-              <MdMenu size={32} className="text-white" />
-            )}
-          </button>
+        <div className="desktop-nav">
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={pathname === item.href ? "active" : ""}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
 
-        {/* Mobile menu */}
-        <div
-          className={`lg:hidden absolute top-[92px] left-0 right-0 bg-white z-50 border-b border-b-[var(--color-primary)]/10 shadow-md transition-all duration-300 ease-in-out ${
-            mobileMenuOpen
-              ? "max-h-[500px] opacity-100"
-              : "max-h-0 opacity-0 overflow-hidden"
-          }`}
+        <Link href="/#contact" className="nav-cta">
+          Work with us <ArrowUpRight size={16} aria-hidden="true" />
+        </Link>
+
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
         >
-          <ul className="flex flex-col py-4 px-6">
-            {navdata.map((item, index) => (
-              <li key={index} className="py-2">
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "text-[var(--color-primary)] text-sm font-medium tracking-wider block",
-                    isActive(item.href) && "text-[#B46E0F]"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </nav>
+
+      {open && (
+        <div className="mobile-nav">
+          <div className="site-container">
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={pathname === item.href ? "active" : ""}
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link href="/#contact" onClick={() => setOpen(false)}>
+              Work with us
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
-
-export default Header;

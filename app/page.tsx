@@ -1,260 +1,220 @@
-import Image from "next/image";
 import Link from "next/link";
-
-import heroImg from "../public/assets/images/testimage.svg";
-import chartImg from "../public/assets/icons/chart.svg";
-import fileImg from "../public/assets/icons/file.svg";
-import dataImg from "../public/assets/icons/data.svg";
-import partnerImg from "../public/assets/images/ashinity-partner-image.png";
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+  Blocks,
+  CircleCheck,
+  Compass,
+  Landmark,
+  Sparkles,
+} from "lucide-react";
 
 import ContactUs from "@/components/ContactUs";
+import NewsEventsShowcase from "@/components/NewsEventsShowcase";
 import RecentProjects from "@/components/RecentProjects";
 
-const capabilities = [
+const services = [
   {
-    icon: chartImg,
-    title: "Innovation advisory",
+    number: "01",
+    icon: Landmark,
+    title: "Strategy & policy",
     description:
-      "Strategy, policy insight, and programme design for institutions and regulated organizations.",
-    points: ["Policy research", "Programme design", "Stakeholder alignment"],
+      "Clear direction for institutions navigating technology, markets, and public value.",
+    details: ["Research and insight", "Programme design", "Stakeholder alignment"],
   },
   {
-    icon: fileImg,
-    title: "Product and systems delivery",
+    number: "02",
+    icon: Blocks,
+    title: "Products & systems",
     description:
-      "Scoped digital initiatives that move from plan to operational reality.",
-    points: ["Solution design", "Workflow digitization", "Delivery oversight"],
+      "Useful digital infrastructure shaped around the way your teams and customers actually work.",
+    details: ["Service design", "Product delivery", "Workflow transformation"],
   },
   {
-    icon: dataImg,
-    title: "Applied emerging tech",
+    number: "03",
+    icon: Sparkles,
+    title: "Frontier technology",
     description:
-      "AI and frontier technology used where they improve the brief, not as marketing decoration.",
-    points: ["Technology selection", "Pilot planning", "Measured deployment"],
+      "Practical exploration of AI and emerging technology, grounded in a real operating need.",
+    details: ["Opportunity mapping", "Prototype planning", "Responsible adoption"],
   },
 ];
 
-const clientFit = [
-  "Governments and public institutions shaping innovation priorities",
-  "Ecosystem builders, accelerators, and foundations running programmes",
-  "Regulated organizations balancing transformation with operational rigor",
-];
-
-const operatingModel = [
+const process = [
   {
-    step: "01",
-    title: "Clarify the mandate",
-    description: "Define the decision, system, or programme that needs to move.",
+    step: "Discover",
+    title: "Find the decision beneath the brief.",
+    copy: "We bring the right questions, listen closely, and define the change that matters.",
   },
   {
-    step: "02",
-    title: "Build the right scope",
-    description: "Structure a focused advisory or delivery workstream.",
+    step: "Design",
+    title: "Shape the smallest credible path forward.",
+    copy: "Strategy, service, and technology become one clear, executable scope.",
   },
   {
-    step: "03",
-    title: "Deliver usable outcomes",
-    description: "Leave the client with assets, systems, and next actions that stick.",
+    step: "Deliver",
+    title: "Leave behind something that works.",
+    copy: "A decision, programme, or system your team can own and move forward with.",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="bg-[#f7faf9]">
-      <section className="border-b border-[var(--color-primary)]/10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-20 sm:px-8 md:px-10 lg:px-12 lg:py-28 xl:px-0">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="max-w-2xl">
-              <h1 className="text-5xl font-black uppercase leading-[1.02] text-[var(--color-primary)] lg:text-[72px]">
-                Strategy becomes operating reality.
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-700">
-                Ashinity helps institutions and growth-stage ventures turn
-                innovation strategy into deployable systems and measurable
-                outcomes.
-              </p>
-              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="#contact"
-                  className="rounded-full bg-[var(--btn-color)] px-6 py-3 text-sm font-semibold tracking-wide text-white transition hover:opacity-90"
-                >
-                  Request a scoping call
-                </Link>
-                <Link
-                  href="/about-us"
-                  className="rounded-full border border-[var(--color-primary)]/20 px-6 py-3 text-sm font-semibold tracking-wide text-[var(--color-secondary)] transition hover:border-[var(--btn-color)] hover:text-[var(--btn-color)]"
-                >
-                  View firm overview
-                </Link>
-              </div>
-            </div>
-
-            <div className="rounded-[32px] border border-[var(--color-primary)]/10 bg-[linear-gradient(180deg,rgba(170,249,255,0.22),rgba(255,255,255,1))] p-8 shadow-[0_20px_60px_rgba(21,60,63,0.08)]">
-              <Image
-                src={heroImg}
-                width={560}
-                height={560}
-                priority
-                alt="Ashinity consulting illustration"
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
-                What we do
-              </p>
-              <h2 className="mt-3 text-4xl font-semibold text-[var(--color-secondary)] lg:text-[48px]">
-                Focused support for complex mandates.
-              </h2>
-            </div>
-          </div>
-
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {capabilities.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-[28px] border border-[var(--color-primary)]/10 bg-white p-7 shadow-[0_8px_30px_rgba(21,60,63,0.06)]"
-              >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-primary)]/10">
-                  <Image
-                    src={item.icon}
-                    alt=""
-                    width={28}
-                    height={28}
-                    className="h-auto w-7"
-                  />
-                </div>
-                <h3 className="mt-6 text-2xl font-semibold text-[var(--color-secondary)]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-base leading-7 text-slate-600">
-                  {item.description}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {item.points.map((point) => (
-                    <span
-                      key={point}
-                      className="rounded-full bg-[var(--color-primary)]/8 px-3 py-2 text-sm text-slate-700"
-                    >
-                      {point}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto grid gap-14 px-6 sm:px-8 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-12 xl:px-0">
-          <div className="rounded-[32px] border border-[var(--color-primary)]/10 bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(229,243,244,0.9))] p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
-              Where we are strongest
+    <main>
+      <section className="hero-shell">
+        <div className="site-container hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">Independent strategy + build studio</p>
+            <h1>
+              Ambition,
+              <span className="hero-accent"> made operational.</span>
+            </h1>
+            <p className="hero-intro">
+              Ashinity turns complex mandates into clear strategy, useful
+              systems, and measurable progress.
             </p>
-            <h2 className="mt-4 text-4xl font-semibold text-[var(--color-secondary)]">
-              Best suited to institutions that need both judgment and execution.
-            </h2>
-            <div className="mt-8 space-y-4">
-              {clientFit.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-[var(--color-primary)]/10 bg-white px-5 py-4 text-base leading-7 text-slate-700"
-                >
-                  {item}
-                </div>
-              ))}
+            <div className="hero-actions">
+              <Link href="#contact" className="button button-primary">
+                Start a project <ArrowUpRight size={18} aria-hidden="true" />
+              </Link>
+              <Link href="#capabilities" className="button button-ghost">
+                Explore our work <ArrowDownRight size={18} aria-hidden="true" />
+              </Link>
             </div>
           </div>
 
-          <div className="grid gap-6 lg:grid-rows-[auto_1fr]">
-            <div className="rounded-[32px] bg-slate-950 px-8 py-10 text-white">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--accent-s)]">
-                Positioning
-              </p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight">
-                Innovation strategy should end in a decision, a system, or a
-                programme that can run.
-              </h2>
+          <div className="hero-board" aria-label="Ashinity delivery model">
+            <div className="board-topline">
+              <span>One connected practice</span>
+              <span className="live-dot">Strategy to delivery</span>
             </div>
+            <div className="board-statement">
+              <span>We bring</span>
+              <strong>policy fluency</strong>
+              <strong>product judgment</strong>
+              <strong>delivery discipline</strong>
+              <span>to the same table.</span>
+            </div>
+            <div className="board-footer">
+              <div className="orbit-mark" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
+              <p>Built for institutions and ventures doing consequential work.</p>
+            </div>
+          </div>
+        </div>
+        <div className="site-container hero-index">
+          <span>Policy</span>
+          <span>Product</span>
+          <span>Technology</span>
+          <span>Delivery</span>
+        </div>
+      </section>
 
-            <div className="overflow-hidden rounded-[32px] border border-[var(--color-primary)]/10 bg-[#eef6f4] p-8">
-              <Image
-                src={partnerImg}
-                alt="Ashinity collaboration illustration"
-                className="h-auto w-full"
-              />
+      <section id="capabilities" className="section section-mist">
+        <div className="site-container">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">How we help</p>
+              <h2>From hard questions to working answers.</h2>
             </div>
+            <p>
+              Ashinity works across the distance between what an organisation
+              wants to change and what it takes to change it.
+            </p>
+          </div>
+
+          <div className="service-grid">
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <article className="service-card" key={service.title}>
+                  <div className="service-card-top">
+                    <span>{service.number}</span>
+                    <Icon size={24} strokeWidth={1.8} aria-hidden="true" />
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <ul>
+                    {service.details.map((detail) => (
+                      <li key={detail}>
+                        <CircleCheck size={15} aria-hidden="true" /> {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
-                How we work
-              </p>
-              <h2 className="mt-3 text-4xl font-semibold text-[var(--color-secondary)] lg:text-[48px]">
-                A tighter path from brief to outcome.
-              </h2>
-            </div>
+      <section className="section section-ink">
+        <div className="site-container split-statement">
+          <div>
+            <p className="eyebrow eyebrow-light">Our point of view</p>
+            <h2>Progress needs an operating shape.</h2>
           </div>
-
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {operatingModel.map((item) => (
-              <article
-                key={item.step}
-                className="rounded-[28px] border border-[var(--color-primary)]/10 bg-white p-7 shadow-[0_8px_30px_rgba(21,60,63,0.05)]"
-              >
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--btn-color)]">
-                  {item.step}
-                </p>
-                <h3 className="mt-4 text-2xl font-semibold text-[var(--color-secondary)]">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                  {item.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-[var(--color-primary)]/10 bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-0">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-semibold leading-tight text-[var(--color-secondary)] lg:text-4xl">
-                Ashinity helps institutions and growth-stage ventures turn
-                innovation strategy into deployable systems and measurable
-                outcomes.
-              </h2>
-            </div>
-            <Link
-              href="#contact"
-              className="inline-flex rounded-full border border-[var(--color-primary)]/15 px-6 py-3 text-sm font-semibold tracking-wide text-[var(--color-secondary)] transition hover:border-[var(--btn-color)] hover:text-[var(--btn-color)]"
-            >
-              Start a conversation
+          <div className="statement-copy">
+            <p>
+              The best strategy does not sit on a shelf. It changes a decision,
+              a service, or a system.
+            </p>
+            <p>
+              That is why our work joins senior thinking with the discipline to
+              make things real.
+            </p>
+            <Link href="/about-us" className="text-link text-link-light">
+              More about Ashinity <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
           </div>
         </div>
       </section>
 
-      <RecentProjects />
+      <section className="section section-warm">
+        <div className="site-container">
+          <div className="section-heading process-heading">
+            <div>
+              <p className="eyebrow">A simple engagement model</p>
+              <h2>Clarity at every step.</h2>
+            </div>
+            <Compass size={48} strokeWidth={1.25} aria-hidden="true" />
+          </div>
 
-      <div id="contact">
-        <ContactUs />
-      </div>
+          <div className="process-list">
+            {process.map((item, index) => (
+              <article key={item.step}>
+                <div className="process-number">0{index + 1}</div>
+                <p className="process-step">{item.step}</p>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <NewsEventsShowcase compact />
+
+      <section className="section ventures-section">
+        <div className="site-container">
+          <div className="section-heading compact-heading">
+            <div>
+              <p className="eyebrow">Built close to the work</p>
+              <h2>Experience shaped by ventures, not theory alone.</h2>
+            </div>
+            <p>
+              Our portfolio and partnerships keep our advice grounded in the
+              realities of building, launching, and growing.
+            </p>
+          </div>
+          <RecentProjects />
+        </div>
+      </section>
+
+      <ContactUs />
     </main>
   );
 }

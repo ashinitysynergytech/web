@@ -1,62 +1,41 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Header from "@/components/Header";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ashinity.com"),
-  title: "Ashinity Synergy",
-  description:
-    "Empowering Your Business with Tech, Policy, and Growth Expertise",
-  icons: {
-    icon: "/favicon.ico",
+  title: {
+    default: "Ashinity — Ambition, made operational",
+    template: "%s | Ashinity",
   },
+  description:
+    "Ashinity turns complex mandates into clear strategy, useful systems, and measurable progress.",
+  icons: { icon: "/favicon.ico" },
   openGraph: {
-    title: "Ashinity Synergy",
+    title: "Ashinity — Ambition, made operational",
     description:
-      "Empowering Your Business with Tech, Policy, and Growth Expertise",
-    images: "/favicon.ico",
+      "Strategy, systems, and technology for institutions and ventures doing consequential work.",
+    type: "website",
+    images: [{ url: "/og.png", width: 1730, height: 909, alt: "Ashinity — Ambition, made operational" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ashinity Synergy",
+    title: "Ashinity — Ambition, made operational",
     description:
-      "Empowering Your Business with Tech, Policy, and Growth Expertise",
-    images: "/favicon.ico",
+      "Strategy, systems, and technology for institutions and ventures doing consequential work.",
+    images: ["/og.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <Header />
         {children}
         <Footer />
