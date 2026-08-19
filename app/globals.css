@@ -451,7 +451,7 @@ a { color: inherit; text-decoration: none; }
 
 .venture-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   margin-top: 64px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -468,7 +468,7 @@ a { color: inherit; text-decoration: none; }
 }
 .venture-grid > div:first-child { border-left: 1px solid var(--line); }
 .venture-grid > div:hover { filter: grayscale(0); opacity: 1; }
-.venture-grid img { width: auto; max-width: 105px; max-height: 48px; object-fit: contain; }
+.venture-grid img { width: auto; max-width: 118px; max-height: 48px; object-fit: contain; }
 
 .contact-section {
   padding-block: 110px;
@@ -646,12 +646,15 @@ a { color: inherit; text-decoration: none; }
   .editorial-grid { grid-template-columns: 1fr; }
   .editorial-grid article { min-height: auto; }
   .editorial-card-index { margin-bottom: 48px; }
+  .venture-grid { grid-template-columns: repeat(4, 1fr); }
+  .venture-grid > div:nth-child(5) { border-left: 1px solid var(--line); }
 }
 
 @media (max-width: 640px) {
   .brand-nav { min-height: 72px; }
   .brand-logo { width: 118px; }
   .venture-grid { grid-template-columns: repeat(2, 1fr); }
+  .venture-grid > div:nth-child(5) { border-left: 0; }
   .venture-grid > div { min-height: 110px; border-bottom: 1px solid var(--line); }
   .venture-grid > div:last-child { grid-column: 1 / -1; }
   .contact-section { padding-block: 82px; }

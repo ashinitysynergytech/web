@@ -202,12 +202,12 @@ export default function Home() {
         <div className="site-container">
           <div className="section-heading compact-heading">
             <div>
-              <p className="eyebrow">Built close to the work</p>
-              <h2>Experience shaped by ventures, not theory alone.</h2>
+              <p className="eyebrow">Brands we partner with</p>
+              <h2>Built alongside teams doing consequential work.</h2>
             </div>
             <p>
-              Our portfolio and partnerships keep our advice grounded in the
-              realities of building, launching, and growing.
+              Our partnerships keep our advice grounded in the realities of
+              building, launching, and growing.
             </p>
           </div>
           <RecentProjects />
